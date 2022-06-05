@@ -13,3 +13,18 @@ sed -i "s|if (bind_user == 'True') {|if (bind_user == 'REMOVED') {|g" /www/serve
 ```Bash
 rm -rf /www/server/panel/data/bind.pl
 ```
+
+/class/ajax.py
+delete from "def UpdatePanel(self,get)"to "#检查是否安装任何 def CheckInstalled(self,get)"
+
+/task.py
+
+###def update_panel():
+
+#os.system(“curl http://download.bt.cn/install/update6.sh|bash &”)
+
+tools.py
+
+#elif u_input == 16:
+
+#os.system(“curl http://download.bt.cn/install/update6.sh|bash”)
