@@ -14,11 +14,14 @@ sed -i "s|if (bind_user == 'True') {|if (bind_user == 'REMOVED') {|g" /www/serve
 rm -rf /www/server/panel/data/bind.pl
 ```
 
+```Bash
+timedatectl set-timezone Asia/Singapore
+```
 直接宝塔文件管理当中，打开目录/www/server/panel/class找到并编辑panelplugin.py文件
 使用Ctrl+F搜索并找到softList['list'] = tmpList这段代码，在其下方添加如下代码：
 
 softList['pro'] = 1
-        for soft in softList['list']:
-            soft['endtime'] = 0
+for soft in softList['list']:
+soft['endtime'] = 0
 
 修改完成后重启面板
