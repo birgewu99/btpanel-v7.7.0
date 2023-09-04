@@ -12,19 +12,13 @@ sed -i "s|if (bind_user == 'True') {|if (bind_user == 'REMOVED') {|g" /www/serve
 ```
 ```Bash
 rm -rf /www/server/panel/data/bind.pl
-```
 
-/class/ajax.py
-delete from "def UpdatePanel(self,get)"to "#检查是否安装任何 def CheckInstalled(self,get)"
 
-/task.py
+直接宝塔文件管理当中，打开目录/www/server/panel/class找到并编辑panelplugin.py文件
+使用Ctrl+F搜索并找到softList['list'] = tmpList这段代码，在其下方添加如下代码：
 
-###def update_panel():
+softList['pro'] = 1
+        for soft in softList['list']:
+            soft['endtime'] = 0
 
-#os.system(“curl http://download.bt.cn/install/update6.sh|bash &”)
-
-tools.py
-
-#elif u_input == 16:
-
-#os.system(“curl http://download.bt.cn/install/update6.sh|bash”)
+修改完成后重启面板
