@@ -1,5 +1,15 @@
 # btpanel-v7.7.0
 btpanel-v7.7.0-backup 
+```Bash
+apt update -y
+```
+```Bash
+apt upgrade -y
+```
+
+```Bash
+timedatectl set-timezone Asia/Singapore
+```
 
 **Centos/Ubuntu/Debian安装命令 独立运行环境（py3.7）**
 
