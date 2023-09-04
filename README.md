@@ -12,7 +12,7 @@ sed -i "s|if (bind_user == 'True') {|if (bind_user == 'REMOVED') {|g" /www/serve
 ```
 ```Bash
 rm -rf /www/server/panel/data/bind.pl
-
+```
 
 直接宝塔文件管理当中，打开目录/www/server/panel/class找到并编辑panelplugin.py文件
 使用Ctrl+F搜索并找到softList['list'] = tmpList这段代码，在其下方添加如下代码：
